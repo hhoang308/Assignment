@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Mode"
+        android:id="@+id/mode"/>
+    <item android:title="Font">
+        <menu>
+            <item android:title="Arial"
+                android:id="@+id/font1"/>
+            <item android:title="Brookerly"
+                android:id="@+id/font2"/>
+        </menu>
+    </item>
+    <item android:title="Text Size">
+        <menu>
+            <item android:title="Big"
+                android:id="@+id/bigTextSize"/>
+            <item android:title="Small"
+                android:id="@+id/smallTextSize"/>
+            <item android:title="Normal"
+                android:id="@+id/normalTextSize"/>
+        </menu>
+    </item>
+</menu>

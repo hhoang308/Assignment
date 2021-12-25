@@ -44,9 +44,13 @@ public class DetailFrag extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
         TextView txtDetail = (TextView) view.findViewById(R.id.detailText);
-        int index = getActivity().getIntent().getIntExtra("index",1);
+        int index = getActivity().getIntent().getIntExtra("index",0);
         int textFile = R.raw.chapter1;
-        if(index == 1)
+        if(index == 0)
+        {
+            textFile = R.raw.chapter1;
+        }
+        else if(index == 1)
         {
             textFile = R.raw.chapter2;
         }

@@ -27,22 +27,14 @@ public class MainActivity extends AppCompatActivity {
             ListFrag listFrag = new ListFrag();
             fragmentTransaction.replace(R.id.fragmentListFrag,listFrag);
         }
-        fragmentTransaction.commit();
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+        else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
         {
             ListFrag listFrag = new ListFrag();
             DetailFrag detailFrag = new DetailFrag();
-            fragmentTransaction.replace(R.id.fragmentDetailFrag, detailFrag);
-            fragmentTransaction.replace(R.id.fragmentListFrag, listFrag);
+            fragmentTransaction.replace(R.id.landDetailFrag, detailFrag);
+            fragmentTransaction.replace(R.id.landListFrag, listFrag);
         }
-        super.onSaveInstanceState(outState);
+        fragmentTransaction.commit();
     }
 
     @Override
